@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D321E996-6ED5-4F8C-8ACC-FA7268FF64CA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DirectorRPG</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>irrKlang.lib;ILUT.lib;ILU.lib;DevIL.lib;GLee.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="drpg_glCharacter.cpp" />
+    <ClCompile Include="drpg_glCamera.cpp" />
+    <ClCompile Include="drpg_glEntity.cpp" />
+    <ClCompile Include="drpg_glMesh.cpp" />
+    <ClCompile Include="drpg_glObjectPipeline.cpp" />
+    <ClCompile Include="drpg_glFramebufferobject.cpp" />
+    <ClCompile Include="drpg_glModel.cpp" />
+    <ClCompile Include="drpg_glShader.cpp" />
+    <ClCompile Include="drpg_glTextManager.cpp" />
+    <ClCompile Include="drpg_glTextureSource.cpp" />
+    <ClCompile Include="drpg_vector3d.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="drpgut.h" />
+    <ClInclude Include="drpg_glCharacter.h" />
+    <ClInclude Include="drpg_glCamera.h" />
+    <ClInclude Include="drpg_glMesh.h" />
+    <ClInclude Include="drpg_glObjectPipeline.h" />
+    <ClInclude Include="drpg_glEnity.h" />
+    <ClInclude Include="drpg_glFramebufferobject.h" />
+    <ClInclude Include="drpg_glModel.h" />
+    <ClInclude Include="drpg_glModelData.h" />
+    <ClInclude Include="drpg_glShader.h" />
+    <ClInclude Include="drpg_glTextManager.h" />
+    <ClInclude Include="drpg_header.h" />
+    <ClInclude Include="drpg_glTextureSource.h" />
+    <ClInclude Include="drpg_vector3d.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\alphaShader.frag" />
+    <None Include="Shader\alphaShader.vs" />
+    <None Include="Shader\blurShader.frag" />
+    <None Include="Shader\brightlightShader.frag" />
+    <None Include="Shader\combineShader.frag" />
+    <None Include="Shader\fragment.frag" />
+    <None Include="Shader\fxaaShader.frag" />
+    <None Include="Shader\fxaaShader.vs" />
+    <None Include="Shader\normalMapShader.frag" />
+    <None Include="Shader\normalMapShader.vs" />
+    <None Include="Shader\quadRenderShader.frag" />
+    <None Include="Shader\quadRenderShader.vs" />
+    <None Include="Shader\skyboxShader.frag" />
+    <None Include="Shader\skyboxShader.vs" />
+    <None Include="Shader\vertex.vs" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
